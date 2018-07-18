@@ -5,7 +5,8 @@ function isParanthesis(char) {
 }
 
 function isOpenParenthesis(parenthesisChar, tokens) {
-  for (let i = 0; i < tokens.length; i += 1) {
+  const { length } = tokens;
+  for (let i = 0; i < length; i += 1) {
     if (tokens[i][0] === parenthesisChar) {
       return true;
     }
@@ -14,9 +15,10 @@ function isOpenParenthesis(parenthesisChar, tokens) {
 }
 
 function matches(topOfStack, closedParenthesis, tokens) {
-  for (let k = 0; k < tokens.length; k += 1) {
-    if (tokens[k][0] === topOfStack
-       && tokens[k][1] === closedParenthesis) {
+  const { length } = tokens;
+  for (let i = 0; i < length; i += 1) {
+    if (tokens[i][0] === topOfStack
+       && tokens[i][1] === closedParenthesis) {
       return true;
     }
   }
@@ -28,18 +30,18 @@ function isBalancedParentheses(expression) {
   const tokens = [['{', '}'], ['[', ']'], ['(', ')']];
   const { length } = expression;
   for (let i = 0; i < length; i += 1) {
-    const currentChar = expression[i];
-    if (isParanthesis(currentChar)) {
-      if (isOpenParenthesis(currentChar, tokens)) {
-        stack.push(currentChar);
+    const char = expression[i];
+    if (isParanthesis(char)) {
+      if (isOpenParenthesis(char, tokens)) {
+        stack.push(char);
       } else {
         if (stack.length === 0) return false;
         const topOfStack = stack.pop();
-        if (!matches(topOfStack, currentChar, tokens)) return false;
+        if (!matches(topOfStack, char, tokens)) return false;
       }
     }
   }
-  if (stack.length === 0) return true;
+  return true;
 }
 
 export default isBalancedParentheses;

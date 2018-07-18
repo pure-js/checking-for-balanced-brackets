@@ -1,1 +1,1 @@
-# checking-for-balanced-brackets
+# Checking for balanced brackets

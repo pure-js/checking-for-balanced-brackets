@@ -23,4 +23,3 @@ test('((b){a}) to equal true', () => {
 test('((){(}) to equal false', () => {
   expect(isBalancedParentheses('((){(})')).toBe(false);
 });
-

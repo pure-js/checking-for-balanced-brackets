@@ -2,9 +2,9 @@
   "name": "checking-for-balanced-brackets",
   "version": "1.0.0",
   "description": "Есть набор скобок - (), [], {}, из которых может быть составлено какое-то выражение, например ([{}]), кроме скобок в выражении могут быть любые символы. Нужно написать функцию, которая проверит корректность расстановки скобок в выражении и  вернет true, если корректно и false, если нет. Например, выражение ({а}) - полностью корректно, а ({} или [()}] - будут некорректными",
-  "main": "src/isBalanced.js",
+  "main": "src/isBalancedParentheses.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --coverage",
     "lint": "eslint src/*.js"
   },
   "repository": {
@@ -18,16 +18,12 @@
   },
   "homepage": "https://github.com/pure-js/checking-for-balanced-brackets#readme",
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
-    "eslint": "^5.1.0",
-    "eslint-config-airbnb-base": "^13.0.0",
-    "eslint-plugin-import": "^2.13.0",
-    "jest": "^23.4.1"
+    "@babel/preset-env": "^7.3.1",
+    "babel-jest": "^24.1.0",
+    "eslint": "^5.13.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "jest": "^24.1.0"
   },
-  "dependencies": {
-    "babel-core": "^6.26.3",
-    "babel-jest": "^23.4.0",
-    "regenerator-runtime": "^0.12.0"
-  }
+  "dependencies": {}
 }

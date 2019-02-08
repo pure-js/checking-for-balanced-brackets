@@ -1,2 +1,6 @@
-# NPM
+# Istanbul JS code coverage tool
+coverage/
+
+# Node.js package manager
 node_modules/
+*.log

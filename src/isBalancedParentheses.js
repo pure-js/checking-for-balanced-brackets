@@ -1,7 +1,6 @@
 function isParanthesis(char) {
   const parenthesis = '{}[]()';
-  if (parenthesis.indexOf(char) > -1) return true;
-  return false;
+  return (parenthesis.indexOf(char) > -1);
 }
 
 function isOpenParenthesis(parenthesisChar, tokens) {

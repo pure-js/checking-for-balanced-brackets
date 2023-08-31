@@ -1,3 +1,4 @@
 # Checking for balanced brackets
 ## The Task
-Есть набор скобок - (), [], {}, из которых может быть составлено какое-то выражение, например ([{}]), кроме скобок в выражении могут быть любые символы. Нужно написать функцию, которая проверит корректность расстановки скобок в выражении и  вернет true, если корректно и false, если нет. Например, выражение ({а}) - полностью корректно, а ({} или [()}] - будут некорректными
+
+There is a set of brackets - (), [], {}, which can be used to form an expression, for example ([{}]), except for brackets there can be any characters in the expression. We need to write a function that will check if the brackets are correct and return true if they are correct and false if they are not. For example, the expression ({a}) is completely correct, while ({} or [()}] will be incorrect
